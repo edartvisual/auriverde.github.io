@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #28a745;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #FFD700;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #28a745;
+}
+
+h2 {
+    margin: 4px 4px;
+    font-size: 15px;
+    color: #2E8B57;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.column {
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 3px solid #28a745;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #28a745;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.green-button {
+    background-color: #28a745;
+}
+
+.green-button:hover {
+    background-color: #218838;
+}
+
+.balance-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#balance {
+    font-size: 24px;
+}
+
+#balance.positive {
+    color: green;
+}
+
+#balance.negative {
+    color: red;
+}
+
+#balance-status.positive {
+    color: green;
+}
+
+#balance-status.negative {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+#transaction-list, #entry-list, #exit-list {
+    list-style: none;
+    padding: 0;
+}
+
+#transaction-list li, #entry-list li, #exit-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #28a745;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-section {
+    margin-bottom: 20px;
+}
+
+#generate-report, #print-report {
+    background-color: #28a745;
+}
+
+#generate-report:hover, #print-report:hover {
+    background-color: #218838;
+}
+
+.transaction-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.transaction-buttons button {
+    background: none;
+    border: none;
+    color: #28a745;
+    cursor: pointer;
+}
+
+.transaction-buttons button:hover {
+    color: #218838;
+}
+
+footer {
+    padding: 10px;
+    background-color: #FFD700;
+    color: #28a745;
+}

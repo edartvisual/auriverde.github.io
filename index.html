@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebApp Auriverde</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-4">
+            <img src="C:\Users\leill\Desktop\webN\IMG\escudo_auriverde.png" alt="Logo" class="logo img-fluid mb-3">
+            <h1>AURIVERDE F.C</h1>
+            <h2>CONTROLE FINANCEIRO</h2>
+        </header>
+        <form id="transaction-form" class="mb-4">
+            <div class="form-group">
+                <label for="description">DESCRIÇÃO:</label>
+                <input type="text" id="description" class="form-control" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="type">TIPO:</label>
+                    <select id="type" class="form-control" required>
+                        <option value="Entrada">ENTRADA</option>
+                        <option value="Saída">SAÍDA</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="date">DATA:</label>
+                    <input type="date" id="date" class="form-control" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="amount">VALOR:</label>
+                    <input type="number" id="amount" step="0.01" class="form-control" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-success btn-block">ADICIONAR</button>
+        </form>
+        
+        <div class="balance-container text-center mb-4">
+            <h2>SALDO ATUAL: <span id="balance">R$ 0.00</span></h2>
+            <h3 id="balance-status">Positivo</h3>
+        </div>
+
+        <h2>TRANSAÇÕES</h2>
+        <ul id="transaction-list" class="list-group mb-4"></ul>
+        
+        <button id="generate-report" class="btn btn-success btn-block">GERAR RELATÓRIO</button>
+        
+        <div id="report" class="hidden mt-4">
+            <h2>RELATÓRIO RESUMIDO</h2>
+            <p id="report-timestamp"></p>
+            <div class="report-section">
+                <h3>ENTRADAS</h3>
+                <ul id="entry-list" class="list-group"></ul>
+            </div>
+            <div class="report-section">
+                <h3>SAÍDAS</h3>
+                <ul id="exit-list" class="list-group"></ul>
+            </div>
+            <button id="print-report" class="btn btn-secondary btn-block mt-3">IMPRIMIR / SALVAR</button>
+        </div>
+    </div>
+    <footer class="text-center mt-4">
+        <p>Versão 2.0</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
